@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="./button.js"></script>
+  <script src="./dropdown.js"></script>
+  <title>Document</title>
+</head>
+<body>
+  <my-dropdown
+    label="下拉菜单组件"
+    option="2"
+    options='[{"label":"Option 1","value":"1"},{"label":"Option 2","value":"2"}]'
+  />
+
+  <script>
+    document
+      .querySelector('my-dropdown')
+      .addEventListener('onOptionChange', (event) => {
+        console.log(event.detail);
+      });
+  </script>
+</body>
+</html>
